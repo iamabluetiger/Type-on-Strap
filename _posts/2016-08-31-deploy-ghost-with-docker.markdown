@@ -2,6 +2,7 @@
 layout: post
 title: Docker로 Ghost 배포하기
 date: 2016-08-31 03:20:04.000000000 +09:00
+tags: [docker, ghost, deploy]
 ---
 [Docker](https://www.docker.com)를 공부하다보니 [Ghost](https://ghost.org)같은 설치형 블로그가 굉장히 접근하기 쉬울 것 같단 생각이 들어서 바로 정지되어 있던 AWS 계정을 복구 시켜 EC2를 생성하였다.
 
@@ -9,7 +10,7 @@ date: 2016-08-31 03:20:04.000000000 +09:00
 
 > [Installation of Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/)는 이 곳에서 참고.
 
-##Deploy Ghost
+## Deploy Ghost
 
 1. Docker Hub에서 Ghost Image 다운로드
 
@@ -23,11 +24,11 @@ Docker로 Ghost를 배포하는 것이 끝났다. Host의 IP 주소 혹은 Domai
 
 Docker의 장점을 부각시키기 위하여 일부러 다른 세팅들은 전혀 하지 않았다고는 하지만 두번의 명령에 블로그가 만들어 지는 것은 정말 대단한 것이라는 생각이 든다.
 
-####***도커 짱짱맨***
+### ***도커 짱짱맨***
 
 ---
 
-###Used Command
+### Used Command
 
     sudo docker run --name iamabluetiger-blog -p 80:2368 -v /iamabluetiger-blog/ghost/:/var/lib/ghost/ -e NODE_ENV=production ghost
 

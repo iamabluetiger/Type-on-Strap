@@ -2,12 +2,14 @@
 layout: post
 title: Docker로 Rails 환경 구축하기
 date: 2016-09-03 10:59:50.000000000 +09:00
----
-앞서 Docker의 입문으로 Ghost를 배포해보았다. 이제 실제 개발 환경을 구축하여 서비스에 적용할 준비를 해볼 차례이다. 도커의 장점을 극대로 느껴보기 위하여 개발환경에서 거의 모든걸 구축하고 실서버에 빠른 배포를 해 볼 계획이기에 이 글의 환경은 현재 쓰고 있는 Mac Book의 **OSX** 이라는 것을 밝혀둔다. ~~*docker for mac 이 나온 이후엔 Host OS는 의미가 없는 것 같지만..*~~ 또한 Ruby on Rails, NGINX, PostgreSQL을 사용하여 서비스를 개발하고 있기 때문에 이를 기반으로 도커 환경을 구축해보려고 한다.
-
+tags: [docker, rails, deploy, nginx, postgresql]
 ---
 
-##Ruby on Rails
+앞서 Docker의 입문으로 Ghost를 배포해보았다. 이제 실제 개발 환경을 구축하여 서비스에 적용할 준비를 해볼 차례이다. Ruby on Rails, NGINX, PostgreSQL을 사용하여 서비스를 개발하고 있기 때문에 이를 기반으로 도커 환경을 구축해보려고 한다.
+
+도커의 장점을 극대로 느껴보기 위하여 개발환경에서 거의 모든걸 구축하고 실서버에 빠른 배포를 해 볼 계획이기에 이 글의 환경은 현재 쓰고 있는 Mac Book의 **OSX** 이라는 것을 밝혀둔다. ~~*docker for mac 이 나온 이후엔 Host OS는 의미가 없는 것 같지만..*~~
+
+## Ruby on Rails
 ```docker
 # Dockerfile
 
@@ -48,7 +50,7 @@ CMD ["rails", "server", "-b", "0.0.0.0"]
 
 ---
 
-##NGINX
+## NGINX
 
 ```nginx
 # Dockerfile
@@ -62,7 +64,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY myapp.conf /etc/nginx/conf.d/myapp.conf
 ```
 
-```nginxconf
+```nginx
 # nginx.conf
     
 ...
@@ -70,6 +72,7 @@ COPY myapp.conf /etc/nginx/conf.d/myapp.conf
 include /etc/nginx/conf.d/*.conf;
 
 ...
+
 ```
 
 ```nginx
@@ -100,7 +103,7 @@ server {
 
 ---
 
-##Docker Compose
+## Docker Compose
 
 > Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
 
@@ -154,4 +157,4 @@ Docker Compose를 이용하면 여러개의 Container를 사용해야만 하는 
 
 <br><br>
 
-![rails default page](/content/images/2016/09/Screen-Shot-2016-09-03-at-7-53-18-PM.png)
+![rails default page]({{ "/assets/img/rails-hello-world.png" | absolute_url }})

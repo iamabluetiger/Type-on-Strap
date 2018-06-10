@@ -3,19 +3,23 @@ layout: post
 title: Git convention Reference
 date: 2016-12-27 05:32:47.000000000 +09:00
 ---
-###1. [Angularjs](http://dogfeet.github.io/articles/2013/angularjs-git-commit-message-conventions.html)
 
-####커밋 메세지 포맷
+GIT 커밋, 브랜치를 어떻게 관리하는 것이 좋을지 찾아보고 정리하여 보았다. 실제로 회사에서 적용하여 사용하고 있는데 커밋 히스토리를 보는데, 브랜치 관리 하는데 많은 도움이 되었다.
 
-```git
+### 1. [Angularjs Git Commit Message Conventions](http://dogfeet.github.io/articles/2013/angularjs-git-commit-message-conventions.html)
+
+#### 커밋 메세지 포맷
+
+```
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
 <BLANK LINE>
 <footer>
 ```
+---
 
-**Subject**
+**메세지 제목**
 
 `<subject>`줄에는 무엇이 달라졌는지 간략하게 기술한다.
 
@@ -53,7 +57,7 @@ date: 2016-12-27 05:32:47.000000000 +09:00
 
 ---
 
-###2. [Git style guide](https://github.com/agis-/git-style-guide)
+### 2. [Git style guide](https://github.com/agis-/git-style-guide)
 
 #### 브랜치
 - 간결하고 잘 설명될 수 있는 이름을 선택하세요.
@@ -78,7 +82,7 @@ date: 2016-12-27 05:32:47.000000000 +09:00
 
 - 커밋은 논리적으로 순서를 가져야 합니다. 예를 들어 커밋 X는 커밋 Y의 변화에 의존한다면 커밋 Y는 커밋 X 보다 먼저 일어나야 합니다.
 
-####메시지
+#### 메시지
 
 - 커밋 메시지를 작성할때, 터미널 보다는 에디터를 사용하세요.
 
@@ -126,7 +130,7 @@ date: 2016-12-27 05:32:47.000000000 +09:00
 
         $ git commit --squash f387cab2
 
-####머지
+#### 머지
 
 - 이력을 "깔끔"하고 "단순"하게 유지하세요. 브랜치를 "머지하기 바로 직전에"
 1. 이력이 관습을 따르고 있는지, 필요하지 않은 행위는 없는지 확인하세요. (squash/reorder commits, reword messages etc.)
@@ -146,14 +150,14 @@ date: 2016-12-27 05:32:47.000000000 +09:00
         # bad
         $ git merge my-branch
 
-####기타
+#### 기타
 
 - 푸시하기 전에 테스트 하세요. 완료되지 않은 일을 푸시하지 마세요.
 - 종종 성능 유지 작업을 통해 리파지토리가 좋은 모습을 가지도록 유지하세요. 그것이 로컬 리파지토리이건, 원격 리파지토리건 간에
 
 ---
 
-###3. [A Successful Git Branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+### 3. [A Successful Git Branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
 - Git Branch 관련하여 그림과 함께 세세한 설명이 잘 되 있어서 Reference용.
 

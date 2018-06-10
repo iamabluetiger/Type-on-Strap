@@ -7,7 +7,7 @@ date: 2017-01-17 14:41:14.000000000 +09:00
 
 정규화는 하나의 테이블을 여러개의 테이블로 분리시키는 과정이므로 일반적으로 정규화가 진행될 수록 테이블 수가 늘어나게 된다. 이 과정은 중복된 데이터를 줄이고 이상증상들을 없앨 수 었지만 테이블 수가 늘어나 SELECT 시에 여러 테이블을 참조해야만 하므로 성능이 저하되는 단점이 있다.
 
-    여러 테이블에 분산되어 있는 정보를 SELECT 시에 JOIN을 하게 되는데 이는 데이터베이스에서 가장 부하가 많이 걸리는 작업 중에 하나이다. 참고로 이를 줄이기 위해 Subquery를 사용하기도 한다. 이런 단점 때문에 대규모 데이터 처리를 하는 경우 하나의 테이블에 몰아 넣기도 한다.
+> 여러 테이블에 분산되어 있는 정보를 SELECT 시에 JOIN을 하게 되는데 이는 데이터베이스에서 가장 부하가 많이 걸리는 작업 중에 하나이다. 참고로 이를 줄이기 위해 Subquery를 사용하기도 한다. 이런 단점 때문에 대규모 데이터 처리를 하는 경우 하나의 테이블에 몰아 넣기도 한다.
 
 #### __정규화 종류__
 
@@ -22,11 +22,8 @@ date: 2017-01-17 14:41:14.000000000 +09:00
 
 - __3st Normal Form(3NF)__
   1. 2NF 만족 (2NF과정을 거치지 않고 3NF으로 변환 가능하다)
-  2. No transitive dependency
-  3. `**보통 3NF까지 만족하면 정규화되었다라고 표현한다`
-
-            Transitive dependency (이행 종속)
-            Z = not a subset of any candidate key라고 할 때 X->Z & Z->Y인 함수 종속이 없는 relation.
+  2. No transitive dependency[^1]
+  3. _**보통 3NF까지 만족하면 정규화되었다라고 표현한다**_
 
 - __Boyce-Codd Normal Form(BCNF)__
   1. For every X->A in FD's in relation schema R, X is a superkey of R.
@@ -44,3 +41,9 @@ date: 2017-01-17 14:41:14.000000000 +09:00
 1. [위키백과: 데이터베이스 정규화](https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EC%A0%95%EA%B7%9C%ED%99%94)
 - [ezphp](http://brown.ezphp.net/125)
 - [Lael's World](http://brown.ezphp.net/125)
+
+---
+
+[^1]: Transitive dependency (이행 종속), Z = not a subset of any candidate key라고 할 때 X->Z & Z->Y인 함수 종속이 없는 relation.
+
+
