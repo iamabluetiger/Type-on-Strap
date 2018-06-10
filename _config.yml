@@ -14,11 +14,12 @@ theme_settings:
   gravatar: # Email MD5 hash
 
   # Header and footer text
-  # header_text: > #two or three lines to describe your site
-     # <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
-  # header_text_feature_image: assets/img/pexels/triangular.jpeg
+  header_text: > #two or three lines to describe your site
+    Park CheongHo, Ten </br>
+    Developer
+  header_text_feature_image: assets/img/pexels/page_feature_image.jpeg
   footer_text: >
-   Park CheongHo
+    Park CheongHo
 
   # Icons
   rss: false  # Make sure you created a feed.xml with feed.xml layout
