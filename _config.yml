@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://iamabluetiger.github.io/"
+url: "http://iamabluetiger.com"
 title: iamabluetiger # site's title
 description: "ruby, rails, vim, docker, design pattern, iamabluetiger" # used by search engines
 
