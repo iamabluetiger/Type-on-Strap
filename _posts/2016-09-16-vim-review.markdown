@@ -2,6 +2,7 @@
 layout: post
 title: VIM 실사용기
 date: 2016-09-16 17:20:02.000000000 +09:00
+tags: [vim, sublime, text editor]
 ---
 
 기억이 나지도 않는다. 내가 왜 갑자기 그 좋은 Sublime Text를 두고 **Vim**을 쓰기로 마음 먹었을까...? 

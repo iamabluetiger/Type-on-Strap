@@ -2,6 +2,7 @@
 layout: post
 title: Migration from PostgreSQL to MySQL
 date: 2016-12-27 06:23:01.000000000 +09:00
+tags: [postgresql, migration, mysql, pg2mysql]
 ---
 Rails에서 사용하던 PostgreSQL Database를 MySQL로 Migration 하기.
 

@@ -2,6 +2,7 @@
 layout: post
 title: CentOS에 nginx, rails 환경 구축하기
 date: 2016-12-02 08:55:45.000000000 +09:00
+tags: [centos, nginx, puma, rails, deploy, ruby]
 ---
 
 CENTOS 환경에서 Rails 서버 구축을 해야하는 상황을 위하여 Manual로 작성해두었다.

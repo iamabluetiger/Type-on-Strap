@@ -2,6 +2,7 @@
 layout: post
 title: CloudFlare(Free-Plan) 사용기
 date: 2017-03-04 04:51:04.000000000 +09:00
+tags: [cloudflare, cdn, TTFB]
 ---
 [CloudFlare](https://www.cloudflare.com)는 CDN 서비스이다. DNS, SSL, 방화벽, DDOS로부터의 방어 등등의 다양한 기능들도 제공한다. 특히 무료로 간단하게 사용할 수 있다는 점이 큰 장점이다. 굉장히 간단하게 버튼 몇번으로 내가 만든 홈페이지에 여러가지 기능을 붙일 수 있기 때문에 홈페이지 구축 후 무조건적으로 사용하게 되었던 서비스이다.
 
